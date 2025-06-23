@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог книг</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <h1>Учёт библиотечного фонда</h1>
+    <nav>
+      <a href="index.html" class="active">Каталог</a>
+      <a href="issue.html">Выдача</a>
+      <a href="report.html">Отчёт</a>
+      <label class="theme-switch">
+        <input type="checkbox" id="themeToggle">
+        <span>🌙</span>
+      </label>
+      <label class="admin-switch">
+        <input type="checkbox" id="adminToggle">
+        <span>👤</span>
+      </label>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Каталог книг</h2>
+    <div class="search">
+      <input id="searchInput" placeholder="Поиск по названию, автору, статусу…">
+    </div>
+    <div class="scan">
+      <input id="rfidInput" placeholder="Сканируйте RFID для добавления">
+    </div>
+    <div id="adminArea" class="admin-area hidden">
+      <input id="adminUser" placeholder="Логин">
+      <input id="adminPass" type="password" placeholder="Пароль">
+      <button id="adminLoginBtn">Войти</button>
+    </div>
+    <table id="catalog" class="table">
+      <thead>
+        <tr>
+          <th data-sort="number" class="sortable">Инв. №</th>
+          <th data-sort="text"   class="sortable">Название</th>
+          <th data-sort="text"   class="sortable">Автор</th>
+          <th data-sort="number" class="sortable">Год</th>
+          <th data-sort="text"   class="sortable">Статус</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- JS вставит сюда строки -->
+      </tbody>
+    </table>
+  </main>
+  
+<script src="./theme.js"></script>
+<script type="module" src="./app.js"></script>
+</body>
+</html>

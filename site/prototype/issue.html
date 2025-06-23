@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Выдача книги</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <h1>Учёт библиотечного фонда</h1>
+    <nav>
+      <a href="index.html">Каталог</a>
+      <a href="issue.html" class="active">Выдача</a>
+      <a href="report.html">Отчёт</a>
+      <label class="theme-switch">
+        <input type="checkbox" id="themeToggle">
+        <span>🌙</span>
+      </label>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Выдача / Возврат книги</h2>
+    <form>
+      <div class="form-group">
+        <label for="userTag">ID читателя (RFID / штрихкод)</label>
+        <input id="userTag" type="text" placeholder="Введите или отсканируйте">
+      </div>
+      <div class="form-group">
+        <label for="bookTag">ID книги (RFID / штрихкод)</label>
+        <input id="bookTag" type="text" placeholder="Введите или отсканируйте">
+      </div>
+      <button class="button" type="submit">Подтвердить</button>
+    </form>
+  </main>
+
+<script src="./theme.js"></script>
+<script type="module" src="./app.js"></script>
+</body>
+</html>

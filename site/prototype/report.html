@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Отчёт по фонду</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <h1>Учёт библиотечного фонда</h1>
+    <nav>
+      <a href="index.html">Каталог</a>
+      <a href="issue.html">Выдача</a>
+      <a href="report.html" class="active">Отчёт</a>
+      <label class="theme-switch">
+        <input type="checkbox" id="themeToggle">
+        <span>🌙</span>
+      </label>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Сводный отчёт</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Статус</th>
+          <th>Количество</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>В наличии</td><td>5</td></tr>
+        <tr><td>На руках</td><td>2</td></tr>
+        <tr><td>Утеряна</td><td>1</td></tr>
+        <tr><td>На ремонте</td><td>0</td></tr>
+      </tbody>
+    </table>
+
+    <canvas id="statusChart" width="133" height="67"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="./report.js"></script>
+  </main>
+  
+<script src="./theme.js"></script>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
